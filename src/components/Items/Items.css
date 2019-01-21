@@ -1,4 +1,8 @@
 .Items {
     display: flex;
     flex-direction: column;
+
+    border: 1px solid gray;
+    border-radius: 1%;
+    padding: 2rem;
 }
