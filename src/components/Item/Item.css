@@ -7,6 +7,7 @@
 }
 
 .Item > .Remove {
+    visibility: hidden;
     width: 4rem;
     padding: 0.25rem;
     margin: 1px;
@@ -20,4 +21,8 @@
 
 .Item > .Remove:focus {
     outline: none;
+}
+
+.Item:hover > .Remove {
+    visibility: visible;
 }
