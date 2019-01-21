@@ -3,7 +3,7 @@ import './Item.css'
 
 class Item extends Component {
     render () {
-        return (<div>{this.props.value}</div>)
+        return (<div className="Item">{this.props.value}</div>)
     }
 }
 
