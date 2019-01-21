@@ -17,7 +17,9 @@ class NewItem extends Component {
   }
 
   addItem = () => {
-    this.props.onAddItem(this.state.item)
+    if (this.state.item) {
+      this.props.onAddItem(this.state.item)
+    }
   }
 
   render () {
