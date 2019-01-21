@@ -10,16 +10,30 @@ class App extends Component {
     super(props)
 
     this.state = {
-      items: [1, 2, 3, 4, 5]
+      items: [1, 2, 3, 4, 5],
+      searchTerm: undefined,
     }
   }
-  render() {
+
+  applyFilter = searchTerm => {
+    this.setState({ searchTerm })
+  }
+
+  filteredItems = () => {
+    if (this.state.searchTerm) {
+      return this.state.items.filter(item => String(item).includes(this.state.searchTerm))
+    }
+
+    return this.state.items
+  }
+
+  render () {
     return (
       <div className="App">
         <div className="content">
-          <Search />
+          <Search onChange={this.applyFilter} />
 
-          <Items value={this.state.items}/>
+          <Items value={this.filteredItems()}/>
         </div>
       </div>
     );

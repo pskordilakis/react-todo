@@ -5,7 +5,7 @@ class Search extends Component {
     render () {
         return (
             <div className="Search">
-                <input type="search" placeholder="Search..." />
+                <input type="search" placeholder="Search..." onChange={event => this.props.onChange(event.target.value)} />
             </div>
         )
     }
