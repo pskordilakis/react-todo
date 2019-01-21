@@ -24,6 +24,14 @@ class App extends Component {
     }
   }
 
+  filteredItems = () => {
+    if (this.state.searchTerm) {
+      return this.state.items.filter(item => String(item.text).includes(this.state.searchTerm))
+    }
+
+    return this.state.items
+  }
+
   applyFilter = searchTerm => {
     this.setState({ searchTerm })
   }
@@ -35,12 +43,10 @@ class App extends Component {
     this.setState({ items })
   }
 
-  filteredItems = () => {
-    if (this.state.searchTerm) {
-      return this.state.items.filter(item => String(item.text).includes(this.state.searchTerm))
-    }
+  removeItem = index => {
+    const items = [ ...this.state.items.slice(0, index), ...this.state.items.slice(index + 1)]
 
-    return this.state.items
+    this.setState({ items })
   }
 
   render () {
@@ -49,7 +55,7 @@ class App extends Component {
         <div className="content">
           <Search onChange={ this.applyFilter } />
 
-          <Items value={ this.filteredItems() } />
+          <Items value={ this.filteredItems() } onRemoveItem={ this.removeItem } />
 
           <NewItem onAddItem={ this.addItem } />
         </div>

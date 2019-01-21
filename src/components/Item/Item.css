@@ -2,4 +2,22 @@
     line-height: 1.5;
     border-bottom: 1px solid gray;
     margin: 0.25rem;
+
+    display: flex;
+}
+
+.Item > .Remove {
+    width: 4rem;
+    padding: 0.25rem;
+    margin: 1px;
+    margin-left: auto;
+    background-color: #E3342F;
+    color: white;
+    border: 1px solid #E3342F;
+    border-radius: 3%;
+    cursor: pointer;
+}
+
+.Item > .Remove:focus {
+    outline: none;
 }
