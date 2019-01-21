@@ -14,14 +14,17 @@
     width: 100%;
     line-height: 2;
     outline: none;
+    margin-right: .25rem;
 }
 
 .NewItem > .Add {
+    width: 5rem;
     padding: 0.25rem;
     margin: 1px;
-    background-color: #51D88A;
+    background-color: #38C172;
     color: white;
-    border-radius: 1%;
+    border: 1px solid #38C172;
+    border-radius: 3%;
     cursor: pointer;
 }
 
