@@ -25,7 +25,7 @@ class NewItem extends Component {
   render () {
     return (
       <div className="NewItem">
-        <input type="input" onChange={this.updateItem}/>
+        <input type="input" placeholder="New Item" onChange={this.updateItem}/>
 
         <button className="Add" onClick={this.addItem}>Add</button>
       </div>

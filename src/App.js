@@ -54,10 +54,10 @@ class App extends Component {
       <div className="App">
         <div className="content">
           <Search onChange={ this.applyFilter } />
+          <NewItem onAddItem={ this.addItem } />
 
           <Items value={ this.filteredItems() } onRemoveItem={ this.removeItem } />
 
-          <NewItem onAddItem={ this.addItem } />
         </div>
       </div>
     );
