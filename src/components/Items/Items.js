@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
-import './Items'
+import './Items.css'
+
+import Item from '../Item/Item'
 
 class Items extends Component {
+  listItems () {
+    return this.props.value.map(item => (<Item />))
+  }
+
   render () {
     return (
       <div className="Items">
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
+        { this.listItems() }
       </div>
     )
   }
