@@ -5,7 +5,7 @@ import Item from '../Item/Item'
 
 class Items extends Component {
   listItems () {
-    return this.props.value.map((item, index) => (<Item key={index} value={item} />))
+    return this.props.value.map((item, index) => (<Item key={index} value={item.text} />))
   }
 
   render () {

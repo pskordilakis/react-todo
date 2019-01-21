@@ -10,7 +10,21 @@ class App extends Component {
     super(props)
 
     this.state = {
-      items: [1, 2, 3, 4, 5],
+      items: [
+        { text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+        { text: 'Proin consectetur nec ipsum sed eleifend.' },
+        { text: 'Praesent scelerisque dui sed lectus lobortis porttitor.' },
+        { text: 'Fusce non luctus sapien.' },
+        { text: 'In vitae tempus ante.' },
+        { text: 'Aliquam vel lobortis nisl.' },
+        { text: 'Nulla facilisi.' },
+        { text: 'Praesent ut erat et ipsum accumsan placerat ac ut lorem. ' },
+        { text: 'Nunc pellentesque ullamcorper imperdiet.' },
+        { text: 'Ut vel justo lorem.' },
+        { text: 'Nullam ornare ultricies ullamcorper.' },
+        { text: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.' },
+        { text: 'Vivamus euismod consequat suscipit.' },
+      ],
       searchTerm: undefined,
     }
   }
@@ -21,7 +35,7 @@ class App extends Component {
 
   filteredItems = () => {
     if (this.state.searchTerm) {
-      return this.state.items.filter(item => String(item).includes(this.state.searchTerm))
+      return this.state.items.filter(item => String(item.text).includes(this.state.searchTerm))
     }
 
     return this.state.items
