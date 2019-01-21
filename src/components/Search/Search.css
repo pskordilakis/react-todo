@@ -1,13 +1,11 @@
-.Search {
-    width: 100%;
-}
-
 .Search > input {
     -moz-appearance: none;/* older firefox */
     -webkit-appearance: none; /* safari, chrome, edge and ie mobile */
     appearance: none; /* rest */
 
     border: 1px solid gray;
+    border-radius: 1%;
     width: 100%;
     line-height: 2;
+    outline: none;
 }

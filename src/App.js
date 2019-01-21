@@ -3,6 +3,7 @@ import './App.css';
 
 import Search from './components/Search/Search'
 import Items from './components/Items/Items'
+import NewItem from './components/NewItem/NewItem'
 
 class App extends Component {
 
@@ -18,12 +19,6 @@ class App extends Component {
         { text: 'In vitae tempus ante.' },
         { text: 'Aliquam vel lobortis nisl.' },
         { text: 'Nulla facilisi.' },
-        { text: 'Praesent ut erat et ipsum accumsan placerat ac ut lorem. ' },
-        { text: 'Nunc pellentesque ullamcorper imperdiet.' },
-        { text: 'Ut vel justo lorem.' },
-        { text: 'Nullam ornare ultricies ullamcorper.' },
-        { text: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.' },
-        { text: 'Vivamus euismod consequat suscipit.' },
       ],
       searchTerm: undefined,
     }
@@ -31,6 +26,13 @@ class App extends Component {
 
   applyFilter = searchTerm => {
     this.setState({ searchTerm })
+  }
+
+  addItem = item => {
+    // append new item
+    const items = [...this.state.items, { text: item }]
+
+    this.setState({ items })
   }
 
   filteredItems = () => {
@@ -45,9 +47,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="content">
-          <Search onChange={this.applyFilter} />
+          <Search onChange={ this.applyFilter } />
 
-          <Items value={this.filteredItems()}/>
+          <Items value={ this.filteredItems() } />
+
+          <NewItem onAddItem={ this.addItem } />
         </div>
       </div>
     );

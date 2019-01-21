@@ -1,0 +1,30 @@
+.NewItem {
+    display: flex;
+    margin: .5rem;
+}
+
+.NewItem > input {
+    flex: 1;
+
+    -moz-appearance: none;/* older firefox */
+    -webkit-appearance: none; /* safari, chrome, edge and ie mobile */
+    appearance: none; /* rest */
+    border: 1px solid gray;
+    border-radius: 1%;
+    width: 100%;
+    line-height: 2;
+    outline: none;
+}
+
+.NewItem > .Add {
+    padding: 0.25rem;
+    margin: 1px;
+    background-color: #51D88A;
+    color: white;
+    border-radius: 1%;
+    cursor: pointer;
+}
+
+.NewItem > .Add:focus {
+    outline: none;
+}
