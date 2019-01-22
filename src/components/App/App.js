@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Search from './components/Search/Search'
-import Items from './components/Items/Items'
-import NewItem from './components/NewItem/NewItem'
+import Search from '../Search/Search'
+import Items from '../Items/Items'
+import NewItem from '../NewItem/NewItem'
 
 class App extends Component {
 
